@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江南文化深度遊：2026年1月行程規劃</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-light: #ff6659;
+            --primary-dark: #9a0007;
+            --secondary-color: #2e7d32;
+            --accent-color: #ff9800;
+            --light-bg: #f9f5f0;
+            --dark-bg: #1a1a1a;
+            --card-bg: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-image: url('https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(249, 245, 240, 0.85);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .trip-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .stat-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--primary-dark);
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .view-toggle {
+            display: flex;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 5px;
+            box-shadow: var(--shadow);
+        }
+
+        .view-toggle button {
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .view-toggle button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-container {
+            display: none;
+        }
+
+        .timeline-container.active {
+            display: block;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 100px;
+        }
+
+        .timeline-day {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .timeline-day .day-number {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .timeline-day .date {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .city-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .timeline-details {
+            margin-top: 15px;
+            display: none;
+        }
+
+        .timeline-details.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            min-width: 120px;
+            color: var(--primary-dark);
+        }
+
+        .detail-content {
+            flex: 1;
+        }
+
+        .location-info-sidebar {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .location-info-sidebar h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-category {
+            margin-bottom: 25px;
+        }
+
+        .location-category h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 6px;
+            margin-bottom: 5px;
+        }
+
+        .location-item:hover {
+            background-color: rgba(211, 47, 47, 0.05);
+            transform: translateX(5px);
+        }
+
+        .hotel-item, .restaurant-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .hotel-name, .restaurant-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .hotel-details, .restaurant-details {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        .hotel-nights, .restaurant-type {
+            background-color: var(--primary-light);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .cards-container {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .cards-container.active {
+            display: grid;
+        }
+
+        .day-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-day {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .card-date {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .card-city {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--primary-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-highlights {
+            margin-bottom: 15px;
+        }
+
+        .card-highlights ul {
+            padding-left: 20px;
+        }
+
+        .card-highlights li {
+            margin-bottom: 8px;
+        }
+
+        .card-details {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: auto;
+            display: none;
+        }
+
+        .card-details.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .progress-container {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .progress-container h2 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            width: 6.25%; /* 1/16 days */
+            transition: width 1s ease;
+        }
+
+        .progress-days {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        .day-counter {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .day-counter:hover {
+            transform: scale(1.1);
+        }
+
+        .day-counter .current-day {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .day-counter .total-days {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .current-day-indicator {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .city-summary {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .city-summary h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .city-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .city-card {
+            background: linear-gradient(135deg, var(--secondary-color), #4caf50);
+            color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .city-card.hangzhou { background: linear-gradient(135deg, #d32f2f, #f44336); }
+        .city-card.nanjing { background: linear-gradient(135deg, #2e7d32, #4caf50); }
+        .city-card.yangzhou { background: linear-gradient(135deg, #1976d2, #2196f3); }
+        .city-card.suzhou { background: linear-gradient(135deg, #7b1fa2, #9c27b0); }
+        .city-card.shanghai { background: linear-gradient(135deg, #f57c00, #ff9800); }
+
+        .city-card i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .city-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .city-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .main-content {
+                gap: 20px;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 40px;
+            }
+            
+            .timeline-item {
+                padding-left: 80px;
+            }
+            
+            .timeline-day {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .timeline-day .day-number {
+                font-size: 1.4rem;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+            
+            .day-counter {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+            
+            .current-day-indicator {
+                top: 20px;
+                right: 20px;
+            }
+            
+            .city-cards {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="current-day-indicator">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>當前行程：杭州 · 第 1 天</span>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-route"></i> 江南文化深度遊</h1>
+            <div class="subtitle">杭州 · 南京 · 揚州 · 蘇州 · 上海 | 2026年1月23日 - 2月7日 | 16天15夜行程規劃</div>
+            
+            <div class="trip-stats">
+                <div class="stat-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>16 天行程</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-city"></i>
+                    <span>5 座城市</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-bed"></i>
+                    <span>5 間住宿</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>23+ 餐廳推薦</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span>即時更新</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 城市摘要 -->
+        <div class="city-summary">
+            <h3><i class="fas fa-city"></i> 行程城市</h3>
+            <div class="city-cards">
+                <div class="city-card hangzhou" data-city="hangzhou">
+                    <i class="fas fa-lake"></i>
+                    <h4>杭州</h4>
+                    <p>第1-4天<br>4天3夜</p>
+                </div>
+                <div class="city-card nanjing" data-city="nanjing">
+                    <i class="fas fa-landmark"></i>
+                    <h4>南京</h4>
+                    <p>第5-7天<br>3天3夜</p>
+                </div>
+                <div class="city-card yangzhou" data-city="yangzhou">
+                    <i class="fas fa-water"></i>
+                    <h4>揚州</h4>
+                    <p>第8-10天<br>3天3夜</p>
+                </div>
+                <div class="city-card suzhou" data-city="suzhou">
+                    <i class="fas fa-tree"></i>
+                    <h4>蘇州</h4>
+                    <p>第11-13天<br>3天3夜</p>
+                </div>
+                <div class="city-card shanghai" data-city="shanghai">
+                    <i class="fas fa-building"></i>
+                    <h4>上海</h4>
+                    <p>第14-16天<br>3天2夜</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="view-toggle">
+                <button class="active" id="timeline-view"><i class="fas fa-stream"></i> 時間軸視圖</button>
+                <button id="cards-view"><i class="fas fa-th-large"></i> 卡片視圖</button>
+            </div>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-globe-asia"></i> 全部行程
+                </button>
+                <button class="filter-btn" data-filter="hangzhou">
+                    <i class="fas fa-lake"></i> 杭州
+                </button>
+                <button class="filter-btn" data-filter="nanjing">
+                    <i class="fas fa-landmark"></i> 南京
+                </button>
+                <button class="filter-btn" data-filter="yangzhou">
+                    <i class="fas fa-water"></i> 揚州
+                </button>
+                <button class="filter-btn" data-filter="suzhou">
+                    <i class="fas fa-tree"></i> 蘇州
+                </button>
+                <button class="filter-btn" data-filter="shanghai">
+                    <i class="fas fa-building"></i> 上海
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="timeline-container active" id="timeline-view-container">
+                <div class="timeline" id="timeline">
+                    <!-- 時間軸內容將由JavaScript動態生成 -->
+                </div>
+            </div>
+
+            <div class="location-info-sidebar">
+                <h3><i class="fas fa-info-circle"></i> 行程資訊總覽</h3>
+                
+                <div class="location-category">
+                    <h4><i class="fas fa-bed"></i> 住宿飯店</h4>
+                    <div id="hotel-list">
+                        <!-- 飯店列表將由JavaScript動態生成 -->
+                    </div>
+                </div>
+                
+                <div class="location-category">
+                    <h4><i class="fas fa-utensils"></i> 推薦餐飲</h4>
+                    <div id="restaurant-list">
+                        <!-- 餐廳列表將由JavaScript動態生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cards-view-container">
+            <!-- 卡片內容將由JavaScript動態生成 -->
+        </div>
+
+        <div class="progress-container">
+            <h2><i class="fas fa-chart-line"></i> 行程進度</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-days">
+                <span>第 1 天</span>
+                <span>第 8 天</span>
+                <span>第 16 天</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>江南文化深度遊行程規劃 &copy; 2026 | 資料來源：2026中國行程.xlsx</p>
+            <p>本行程包含航班、高鐵、住宿、餐飲及景點資訊，實際行程可能因天氣、交通等因素調整</p>
+            <p>建議提前預訂博物館門票及餐廳，部分熱門景點需7日前預約</p>
+        </footer>
+    </div>
+
+    <div class="day-counter" id="day-counter">
+        <div class="current-day">1</div>
+        <div class="total-days">/16</div>
+    </div>
+
+    <script>
+        // 行程數據（保持不變）
+        const itinerary = [
+            {
+                day: 1,
+                date: "1/23 (五)",
+                content: "KHH (09:00) → MFM (10:25)<br>MFM (12:10) → HGH (14:35)<br>航班：NX657 / NX226",
+                city: "杭州",
+                cityClass: "hangzhou",
+                daysInCity: 0,
+                food: "銀行開戶、辦理門號",
+                accommodation: "如家精選酒店 (1晚)",
+                address: "杭州西湖文化廣場地鐵站店",
+                phone: "=86-571-28116868",
+                highlights: ["高雄飛澳門轉機", "澳門飛抵杭州", "辦理銀行開戶與手機門號"]
+            },
+            {
+                day: 2,
+                date: "1/24 (六)",
+                content: "KHH (13:15) → HKG (15:00)<br>HKG (15:50) → HGH (18:15)<br>航班：CX423 / CX962<br>● 小河直街",
+                city: "杭州",
+                cityClass: "hangzhou",
+                daysInCity: 1,
+                food: "杭小館、點都德、阿哥拌川、印湖飯店",
+                accommodation: "如家精選酒店 (3晚)",
+                address: "杭州拱墅區中山北路603號",
+                phone: "=86-571-28116868",
+                highlights: ["高雄飛香港轉機", "香港飛抵杭州", "遊覽小河直街"]
+            },
+            {
+                day: 3,
+                date: "1/25 (日)",
+                content: "● 西溪濕地公園",
+                city: "杭州",
+                cityClass: "hangzhou",
+                daysInCity: 2,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["西溪濕地公園一日遊"]
+            },
+            {
+                day: 4,
+                date: "1/26 (一)",
+                content: "● City Walk: 鳳起農貿市場 / 水上巴士7號線 / 五柳巷 / 德壽宮 / 鼓樓 / 十五奎巷 / 曉霞弄",
+                city: "杭州",
+                cityClass: "hangzhou",
+                daysInCity: 3,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["鳳起農貿市場", "水上巴士7號線", "五柳巷", "德壽宮", "鼓樓", "十五奎巷", "曉霞弄"]
+            },
+            {
+                day: 5,
+                date: "1/27 (二)",
+                content: "● 大馬弄早市<br>高鐵杭州東 (13:20) → 南京南 (14:44)<br>● 下午景點：方案1-古雞鳴寺→南京明城牆(北線)→玄武湖風景區/方案2-老門東歷史街區",
+                city: "南京",
+                cityClass: "nanjing",
+                daysInCity: 1,
+                food: "門東老謝家、玲瓏菜館、好婆湯包、秦淮雅宴",
+                accommodation: "和頤飯店 (3晚)",
+                address: "南京江寧區雙龍大道1222號",
+                phone: "=86-25-52728899",
+                highlights: ["大馬弄早市", "高鐵前往南京", "古雞鳴寺或老門東歷史街區"]
+            },
+            {
+                day: 6,
+                date: "1/28 (三)",
+                content: "● City Walk: 評事街 / 升州路 / 熙南里 / 萬象天地 / 小西湖 / 老門東 / 夫子廟",
+                city: "南京",
+                cityClass: "nanjing",
+                daysInCity: 2,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["評事街", "升州路", "熙南里", "萬象天地", "小西湖", "老門東", "夫子廟"]
+            },
+            {
+                day: 7,
+                date: "1/29 (四)",
+                content: "● 鐘山風景名勝區 / 能仁里農貿市場 / 三七八巷農貿市場",
+                city: "南京",
+                cityClass: "nanjing",
+                daysInCity: 3,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["鐘山風景名勝區", "能仁里農貿市場", "三七八巷農貿市場"]
+            },
+            {
+                day: 8,
+                date: "1/30 (五)",
+                content: "高鐵南京南 (11:58) → 揚州東 (12:57)<br>● 下午景點：方案1-個園→皮市街→東關街→揚州八怪博物館/方案2-瘦西湖→大明寺",
+                city: "揚州",
+                cityClass: "yangzhou",
+                daysInCity: 1,
+                food: "毛牌樓、獅子樓、巴湘、俞氏廚房、茶社：盛園 / 五亭吟春",
+                accommodation: "揚州東高鐵站君亭酒店 (3晚)",
+                address: "廣陵區京杭中路5號京和坊",
+                phone: "=86-514-80337666",
+                highlights: ["高鐵前往揚州", "個園或瘦西湖", "皮市街與東關街"]
+            },
+            {
+                day: 9,
+                date: "1/31 (六)",
+                content: "● 大運揚州 週末市集<br>● 中國大運河博物館 (7日前預約)<br>● 廣陵王墓<br>● 瘦西湖 / 皮市街",
+                city: "揚州",
+                cityClass: "yangzhou",
+                daysInCity: 2,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["大運揚州週末市集", "中國大運河博物館", "廣陵王墓", "瘦西湖/皮市街"]
+            },
+            {
+                day: 10,
+                date: "2/01 (日)",
+                content: "● 三七八巷 (菜市場) / 茶南農貿市場 / 能仁里早市",
+                city: "揚州",
+                cityClass: "yangzhou",
+                daysInCity: 3,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["三七八巷菜市場", "茶南農貿市場", "能仁里早市"]
+            },
+            {
+                day: 11,
+                date: "2/02 (一)",
+                content: "高鐵揚州東 (12:42) → 蘇州站 (14:07)<br>● 下午：平江路",
+                city: "蘇州",
+                cityClass: "suzhou",
+                daysInCity: 1,
+                food: "阿月煲、協和菜館、盛已面館(早)",
+                accommodation: "如家酒店·neo (3晚)",
+                address: "相城區相城大道2888號",
+                phone: "=86-512-88189168",
+                highlights: ["高鐵前往蘇州", "平江路歷史街區"]
+            },
+            {
+                day: 12,
+                date: "2/03 (二)",
+                content: "● 寒山寺 (或 虎丘) / 七里山塘",
+                city: "蘇州",
+                cityClass: "suzhou",
+                daysInCity: 2,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["寒山寺或虎丘", "七里山塘歷史街區"]
+            },
+            {
+                day: 13,
+                date: "2/04 (三)",
+                content: "● 全天行程：拙政園→西園寺",
+                city: "蘇州",
+                cityClass: "suzhou",
+                daysInCity: 3,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["拙政園", "西園寺"]
+            },
+            {
+                day: 14,
+                date: "2/05 (四)",
+                content: "● 早上：葑門橫街 (蘇州)<br>高鐵蘇州北 (13:06) → 上海虹橋 (13:29)<br>● 下午景點：方案1-愚園→烏魯木齊路→武康/安福路/方案2-南京步行街→上海郵政博物館→外灘",
+                city: "上海",
+                cityClass: "shanghai",
+                daysInCity: 1,
+                food: "瑞福園、金仲幫、老瑞福、老上海菜館、阿炳爆鱔",
+                accommodation: "如家酒店·neo (2晚)",
+                address: "上海虹橋國際機場定時班車",
+                phone: "=86-21-52260056",
+                highlights: ["葑門橫街", "高鐵前往上海", "愚園或南京步行街", "外灘夜景"]
+            },
+            {
+                day: 15,
+                date: "2/06 (五)",
+                content: "● 全天行程：豫園→城隍廟→田子坊",
+                city: "上海",
+                cityClass: "shanghai",
+                daysInCity: 2,
+                food: "",
+                accommodation: "(同上)",
+                address: "(同上)",
+                phone: "(同上)",
+                highlights: ["豫園", "城隍廟", "田子坊藝術區"]
+            },
+            {
+                day: 16,
+                date: "2/07 (六)",
+                content: "PVG (09:35) → KHH (11:55)<br>航班：HO1311 (吉祥航空)<br>※ 06:30 前從旅館出發至虹橋站搭地鐵機場快線 (約40分)",
+                city: "-",
+                cityClass: "travel",
+                daysInCity: 0,
+                food: "",
+                accommodation: "-",
+                address: "-",
+               
